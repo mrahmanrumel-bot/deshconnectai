@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>চ্যাট — DeshConnect AI</title>
   <link rel="icon" href="icon.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
   <style>
     .chat-page { height: calc(100vh - 77px); display: flex; flex-direction: column; max-width: 860px; margin: 0 auto; width: 100%; }
     #messages { flex: 1; overflow: auto; padding: 20px 16px 8px; }
@@ -55,13 +55,14 @@
       <button type="button" onclick="ask('পাসপোর্ট স্ট্যাটাস কিভাবে দেখব?')">পাসপোর্ট</button>
       <button type="button" onclick="ask('TIN ও ই-রিটার্ন কোথায়?')">TIN / কর</button>
       <button type="button" onclick="ask('খতিয়ান কিভাবে দেখব?')">ভূমি</button>
+      <button type="button" onclick="ask('জরুরি নম্বর')">হটলাইন</button>
     </div>
     <div class="composer">
       <textarea id="q" placeholder="বাংলায় বা ইংরেজিতে লিখুন..."></textarea>
       <button class="btn btn-primary" id="send" type="button">পাঠান</button>
     </div>
   </div>
-  <script src="kb.js"></script>
-  <script src="app.js"></script>
+  <script src="kb.js?v=2"></script>
+  <script src="app.js?v=2"></script>
 </body>
 </html>
