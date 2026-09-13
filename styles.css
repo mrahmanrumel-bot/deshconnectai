@@ -52,6 +52,7 @@ nav a:hover, nav a.active { color: var(--text); }
 }
 .btn-primary { background: linear-gradient(90deg, var(--green-dim), var(--green)); color: #04110a; }
 .btn-ghost { background: transparent; color: var(--text); border: 1px solid rgba(255,255,255,.14); }
+.hdr-cta { padding: 8px 12px; font-size: 13px; }
 @media (max-width: 800px) {
   nav { display: none; }
   header.top img.brand { height: 40px; }

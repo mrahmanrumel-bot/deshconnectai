@@ -3,39 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DeshConnect AI — বাংলাদেশের জন্য বাংলা AI</title>
-  <meta name="description" content="DeshConnect AI নাগরিক সেবা, সরকারি প্রক্রিয়া ও স্থানীয় তথ্য বাংলায় সহজ করে।" />
+  <title>DeshConnect AI</title>
+  <meta name="description" content="বাংলাদেশের নাগরিক সেবা বাংলায় সহজ করে DeshConnect AI।" />
   <link rel="icon" href="icon.png" type="image/png" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    main { padding: 48px 7vw 80px; }
+    main { padding: 36px 6vw 72px; }
     .hero {
       display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 48px;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 40px;
       align-items: center;
-      max-width: 1120px;
-      margin: 0 auto;
+      max-width: 1080px;
+      margin: 0 auto 56px;
+    }
+    .kicker {
+      color: var(--green);
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
     .logo-wrap { display: flex; justify-content: center; }
-    .logo-wrap img { width: min(460px, 100%); filter: drop-shadow(0 20px 50px rgba(0,196,106,.18)); }
-    h1 { font-size: clamp(28px, 4vw, 44px); line-height: 1.25; margin-bottom: 14px; }
+    .logo-wrap img { width: min(420px, 100%); filter: drop-shadow(0 20px 50px rgba(0,196,106,.18)); }
+    h1 { font-size: clamp(28px, 4.2vw, 46px); line-height: 1.22; margin-bottom: 14px; }
     h1 span { color: var(--green); }
-    .lead { color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 36em; }
-    .actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .chips { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip {
-      font-size: 13px; color: var(--muted);
-      border: 1px solid var(--line); padding: 6px 10px; border-radius: 999px;
+    .lead { color: var(--muted); font-size: 17px; line-height: 1.75; max-width: 34em; }
+    .actions { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .highlights { max-width: 1080px; margin: 0 auto; }
+    .highlights h2 {
+      font-size: 22px;
+      margin-bottom: 18px;
+      font-weight: 700;
     }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 16px 16px;
+      min-height: 148px;
+    }
+    .card h3 { font-size: 16px; margin-bottom: 8px; }
+    .card p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .card a { color: var(--green); font-size: 13px; text-decoration: none; }
     .note {
-      margin-top: 40px; max-width: 1120px; margin-left: auto; margin-right: auto;
-      color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); padding-top: 18px;
+      margin: 40px auto 0;
+      max-width: 1080px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
     }
     @media (max-width: 800px) {
-      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero { grid-template-columns: 1fr; text-align: center; margin-bottom: 36px; }
       .lead { margin-inline: auto; }
-      .actions, .chips { justify-content: center; }
+      .actions { justify-content: center; }
+      .grid { grid-template-columns: 1fr; }
+      .highlights h2 { text-align: center; }
     }
   </style>
 </head>
@@ -44,37 +73,66 @@
     <a href="index.html"><img class="brand" src="logo.png" alt="DeshConnect AI" /></a>
     <nav>
       <a class="active" href="index.html">হোম</a>
-      <a href="chat.html">চ্যাট</a>
+      <a href="chat.html">সহায়ক</a>
     </nav>
+    <a class="btn btn-primary hdr-cta" href="chat.html">জিজ্ঞাসা করুন</a>
   </header>
   <main>
     <section class="hero">
       <div>
+        <p class="kicker">নাগরিক সহায়ক</p>
         <h1>বাংলাদেশকে <span>সংযুক্ত</span> করে<br/>একটি বাংলা AI</h1>
         <p class="lead">
-          DeshConnect AI নাগরিক সেবা ও সরকারি প্রক্রিয়া বাংলা ও বাংলিশে ব্যাখ্যা করে।
-          উত্তরের সাথে অফিসিয়াল সোর্স থাকে।
+          সরকারি সেবার ধাপ, প্রয়োজনীয় লিংক ও পরবর্তী কাজ—বাংলা ও বাংলিশে।
+          প্রতিটি উত্তরে অফিসিয়াল সোর্স থাকে।
         </p>
         <div class="actions">
-          <a class="btn btn-primary" href="chat.html">চ্যাট শুরু করুন</a>
-          <a class="btn btn-ghost" href="chat.html">সেবা দেখুন</a>
-        </div>
-        <div class="chips">
-          <span class="chip">NID</span>
-          <span class="chip">পাসপোর্ট</span>
-          <span class="chip">কর / TIN</span>
-          <span class="chip">ভূমি</span>
-          <span class="chip">myGov</span>
+          <a class="btn btn-primary" href="chat.html">সহায়ক খুলুন</a>
+          <a class="btn btn-ghost" href="#services">সেবা দেখুন</a>
         </div>
       </div>
       <div class="logo-wrap">
-        <img src="logo.png" alt="DeshConnect AI official logo" />
+        <img src="logo.png" alt="DeshConnect AI" />
       </div>
     </section>
-    <p class="note">
-      এটি সরকারি পোর্টাল নয়। তথ্য যাচাই করে অফিসিয়াল ওয়েবসাইট থেকে সেবা নিন।
-      ডোমেইন: deshconnectai.com
-    </p>
+
+    <section class="highlights" id="services">
+      <h2>প্রধান সেবা</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>জাতীয় পরিচয়পত্র</h3>
+          <p>NID সংশোধন, একাউন্ট ও কার্ড সংক্রান্ত ধাপ।</p>
+          <a href="chat.html">জিজ্ঞাসা →</a>
+        </article>
+        <article class="card">
+          <h3>পাসপোর্ট</h3>
+          <p>আবেদন ও স্ট্যাটাস দেখার অফিসিয়াল পথ।</p>
+          <a href="chat.html">জিজ্ঞাসা →</a>
+        </article>
+        <article class="card">
+          <h3>TIN ও আয়কর</h3>
+          <p>নিবন্ধন ও ই-রিটার্নের পোর্টাল গাইড।</p>
+          <a href="chat.html">জিজ্ঞাসা →</a>
+        </article>
+        <article class="card">
+          <h3>ভূমি রেকর্ড</h3>
+          <p>খতিয়ান, পর্চা ও নামজারি কোথায় দেখবেন।</p>
+          <a href="chat.html">জিজ্ঞাসা →</a>
+        </article>
+        <article class="card">
+          <h3>myGov সেবা</h3>
+          <p>এক ছাদের নিচে সরকারি আবেদন ও ট্র্যাকিং।</p>
+          <a href="chat.html">জিজ্ঞাসা →</a>
+        </article>
+        <article class="card">
+          <h3>জন্ম নিবন্ধন</h3>
+          <p>সনদ আবেদন ও যাচাইয়ের নির্দেশনা।</p>
+          <a href="chat.html">জিজ্ঞাসা →</a>
+        </article>
+      </div>
+    </section>
+
+    <p class="note">সরকারি অফিস নয়। চূড়ান্ত সেবা অফিসিয়াল পোর্টাল থেকে নিন।</p>
   </main>
 </body>
 </html>
