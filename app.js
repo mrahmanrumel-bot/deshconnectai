@@ -78,5 +78,5 @@ window.addEventListener("DOMContentLoaded", function () {
       send();
     }
   });
-  addMsg("bot", "আসসালামু আলাইকুম। এখন সব ব্যবহারকারী Gemini দিয়ে প্রশ্ন করতে পারেন। NID, পাসপোর্ট বা যেকোনো সেবা লিখুন।");
+  addMsg("bot", "আসসালামু আলাইকুম। এখন সব ব্যবহারকারী Gemini দিয়ে প্রশ্ন করতে পারেন।");
 });
