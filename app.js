@@ -11,7 +11,9 @@ function addMsg(role, text, sources) {
   if (sources && sources.length) {
     const src = document.createElement("div");
     src.className = "sources";
-    src.innerHTML = sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${s.name}</a>`).join(" · ");
+    src.innerHTML = sources.map(function (s) {
+      return '<a href="' + s.url + '" target="_blank" rel="noopener">' + s.name + "</a>";
+    }).join(" · ");
     wrap.appendChild(src);
   }
   box.appendChild(wrap);
@@ -20,18 +22,16 @@ function addMsg(role, text, sources) {
 
 function reply(q) {
   const hit = findAnswer(q);
-  if (hit) {
-    addMsg("bot", hit.answer, hit.sources);
+  if (!hit) {
+    addMsg("bot", "এই বিষয়টা এখনো নিশ্চিতভাবে জানি না।\n\nএখন সাহায্য করতে পারি: NID, পাসপোর্ট, TIN/কর, ভূমি, myGov, জন্ম নিবন্ধন, বিল, হটলাইন।\n\nbangladesh.gov.bd বা ৩৩৩ ব্যবহার করুন। অনুমান করে ভুল নির্দেশ দেব না।");
     return;
   }
-  addMsg("bot", `এই প্রশ্নের নিশ্চিত উত্তর এখনো নলেজবেসে নেই।
-
-চেষ্টা করুন:
-- bangladesh.gov.bd
-- mygov.bd
-- হটলাইন ৩৩৩
-
-DeshConnect AI সরকারি অফিস নয়, অনুমান করে চূড়ান্ত নির্দেশ দেবে না।`);
+  if (hit.multi) {
+    const lines = hit.items.map(function (it, i) { return (i + 1) + ". " + it.title; }).join("\n");
+    addMsg("bot", "একাধিক বিষয় মিলছে। কোনটা চাই?\n\n" + lines + "\n\nনিচের বাটন বা বিষয়ের নাম লিখুন।");
+    return;
+  }
+  addMsg("bot", hit.answer + "\n\nDeshConnect AI সরকারি অফিস নয়। চূড়ান্ত তথ্য অফিসিয়াল সাইট থেকে নিশ্চিত করুন।", hit.sources);
 }
 
 function send() {
@@ -40,7 +40,7 @@ function send() {
   if (!q) return;
   addMsg("user", q);
   input.value = "";
-  setTimeout(() => reply(q), 250);
+  setTimeout(function () { reply(q); }, 200);
 }
 
 function ask(text) {
@@ -48,13 +48,13 @@ function ask(text) {
   send();
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", function () {
   el("send").addEventListener("click", send);
-  el("q").addEventListener("keydown", (e) => {
+  el("q").addEventListener("keydown", function (e) {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       send();
     }
   });
-  addMsg("bot", "আসসালামু আলাইকুম। আমি DeshConnect AI। NID, পাসপোর্ট, TIN, ভূমি বা myGov নিয়ে জিজ্ঞাসা করুন।");
+  addMsg("bot", "আসসালামু আলাইকুম। NID, পাসপোর্ট, কর, ভূমি, বিল বা হটলাইন নিয়ে জিজ্ঞাসা করুন। বাংলা, ইংরেজি বা বাংলিশ—যেমন খুশি লিখুন।");
 });

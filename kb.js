@@ -1,125 +1,93 @@
 const KB = [
   {
     id: "nid",
-    keys: ["nid", "এনআইডি", "জাতীয় পরিচয়", "জাতীয় পরিচয়", "smart card", "স্মার্ট কার্ড", "ভোটার"],
+    keys: ["nid", "এনআইডি", "জাতীয় পরিচয়", "জাতীয় পরিচয়", "জাতীয় পরিচয়পত্র", "smart card", "স্মার্ট কার্ড", "ভোটার", "nid সংশোধন", "নাম ভুল", "জন্ম তারিখ ভুল"],
     title: "জাতীয় পরিচয়পত্র (NID)",
-    answer: `NID সংক্রান্ত সেবা সাধারণত নির্বাচন কমিশনের পোর্টালে হয়।
-
-কী করবেন
-1. services.nidw.gov.bd এ যান
-2. নিজের একাউন্ট দাবি / লগইন করুন
-3. সংশোধন, কার্ড রিপ্রিন্ট বা স্ট্যাটাস আবেদন করুন
-
-সোর্স
-- NID সেবা: https://services.nidw.gov.bd
-- জাতীয় পোর্টাল: https://bangladesh.gov.bd
-
-DeshConnect AI সরকারি অফিস নয়। চূড়ান্ত তথ্য অফিসিয়াল সাইট থেকে নিশ্চিত করুন।`,
+    answer: "NID সেবা নির্বাচন কমিশনের পোর্টালে হয়।\n\nকী করবেন\n1. services.nidw.gov.bd এ যান\n2. একাউন্ট দাবি বা লগইন করুন\n3. সংশোধন / রিপ্রিন্ট / স্ট্যাটাস আবেদন করুন\n\nপ্রয়োজন হতে পারে: মোবাইল নম্বর, NID নম্বর, জন্ম তারিখ।",
     sources: [
-      { name: "NID Services", url: "https://services.nidw.gov.bd" },
-      { name: "bangladesh.gov.bd", url: "https://bangladesh.gov.bd" }
+      { name: "NID সেবা", url: "https://services.nidw.gov.bd" },
+      { name: "জাতীয় পোর্টাল", url: "https://bangladesh.gov.bd" }
     ]
   },
   {
     id: "passport",
-    keys: ["পাসপোর্ট", "passport", "ইমিগ্রেশন", "mrp", "e-passport"],
+    keys: ["পাসপোর্ট", "passport", "ইমিগ্রেশন", "mrp", "e-passport", "ইপাসপোর্ট", "পাসপোর্ট স্ট্যাটাস", "পাসপোর্ট আবেদন"],
     title: "পাসপোর্ট",
-    answer: `পাসপোর্ট আবেদন ও স্ট্যাটাস দেখার মূল জায়গা ইমিগ্রেশন ও পাসপোর্ট অধিদপ্তর।
-
-কী করবেন
-1. passport.gov.bd এ যান
-2. অনলাইন আবেদন ফর্ম পূরণ করুন
-3. অ্যাপয়েন্টমেন্ট ও ফি নির্দেশনা অনুসরণ করুন
-4. স্ট্যাটাস পেজ থেকে আবেদন ট্র্যাক করুন
-
-সোর্স
-- https://www.passport.gov.bd
-
-ফি, সময় ও প্রয়োজনীয় কাগজ পরিবর্তন হতে পারে—অফিসিয়াল সাইট দেখে নিন।`,
-    sources: [{ name: "Passport", url: "https://www.passport.gov.bd" }]
+    answer: "পাসপোর্ট আবেদন ও স্ট্যাটাস দেখুন passport.gov.bd এ।\n\nকী করবেন\n1. সাইটে যান\n2. অনলাইন আবেদন পূরণ করুন\n3. অ্যাপয়েন্টমেন্ট ও ফি দেখুন\n4. স্ট্যাটাস ট্র্যাক করুন",
+    sources: [{ name: "পাসপোর্ট", url: "https://www.passport.gov.bd" }]
   },
   {
     id: "tin",
-    keys: ["tin", "টিন", "কর", "আয়কর", "e-return", "ই-রিটার্ন", "nbr", "এনবিআর"],
+    keys: ["tin", "টিন", "কর", "আয়কর", "আয়কর", "e-return", "ই-রিটার্ন", "nbr", "এনবিআর", "etax", "ট্যাক্স"],
     title: "TIN ও আয়কর",
-    answer: `TIN নিবন্ধন ও ই-রিটার্ন জাতীয় রাজস্ব বোর্ডের ই-ট্যাক্স পোর্টালে হয়।
-
-কী করবেন
-1. etaxnbr.gov.bd এ যান
-2. TIN নিবন্ধন বা লগইন করুন
-3. ই-রিটার্ন দাখিল ও প্রয়োজনে সনদ ডাউনলোড করুন
-
-সোর্স
-- https://etaxnbr.gov.bd
-
-কর হিসাব বা আইনি পরামর্শ এখানে দেওয়া হয় না।`,
+    answer: "TIN ও ই-রিটার্ন etaxnbr.gov.bd এ।\n\nকী করবেন\n1. সাইটে যান\n2. TIN নিবন্ধন বা লগইন\n3. ই-রিটার্ন দাখিল\n\nকর হিসাব এখানে দেওয়া হয় না।",
     sources: [{ name: "e-TIN / NBR", url: "https://etaxnbr.gov.bd" }]
   },
   {
     id: "land",
-    keys: ["ভূমি", "খতিয়ান", "নামজারি", "পর্চা", "জমি", "land", "mutation", "khatian"],
+    keys: ["ভূমি", "খতিয়ান", "খতিয়ান", "নামজারি", "পর্চা", "জমি", "land", "mutation", "khatian", "ভূমি অফিস"],
     title: "ভূমি / খতিয়ান",
-    answer: `ভূমি রেকর্ড ও নামজারি সংক্রান্ত সেবা land.gov.bd এবং সংশ্লিষ্ট ভূমি অফিসে।
-
-কী করবেন
-1. land.gov.bd এ যান
-2. খতিয়ান / পর্চা অনুসন্ধান দেখুন
-3. নামজারি স্ট্যাটাস ট্র্যাক করুন
-4. প্রয়োজনে স্থানীয় ভূমি অফিসে যাচাই করুন
-
-সোর্স
-- https://land.gov.bd
-- ভূমি সেবা হটলাইন: ১৬১২২`,
-    sources: [{ name: "Land", url: "https://land.gov.bd" }]
+    answer: "খতিয়ান, পর্চা ও নামজারি land.gov.bd এবং স্থানীয় ভূমি অফিসে।\n\nকী করবেন\n1. land.gov.bd এ যান\n2. খতিয়ান / পর্চা খুঁজুন\n3. নামজারি স্ট্যাটাস দেখুন\n\nহটলাইন: ১৬১২২",
+    sources: [{ name: "ভূমি সেবা", url: "https://land.gov.bd" }]
   },
   {
     id: "mygov",
-    keys: ["mygov", "মাইগভ", "সরকারি সেবা", "আবেদন", "e-service"],
+    keys: ["mygov", "মাইগভ", "সরকারি সেবা", "e-service", "ইসেবা"],
     title: "myGov",
-    answer: `অনেক সরকারি সেবা এক জায়গায় আছে myGov গেটওয়েতে।
-
-কী করবেন
-1. mygov.bd এ যান
-2. সেবা খুঁজে আবেদন করুন
-3. আবেদন ট্র্যাক ও ডকুমেন্ট লকার ব্যবহার করুন
-
-সোর্স
-- https://www.mygov.bd
-- জাতীয় পোর্টাল: https://bangladesh.gov.bd
-- তথ্য হটলাইন: ৩৩৩`,
+    answer: "অনেক সরকারি সেবা mygov.bd এ একসাথে আছে।\n\nকী করবেন\n1. mygov.bd এ যান\n2. সেবা খুঁজে আবেদন করুন\n3. আবেদন ট্র্যাক করুন\n\nহটলাইন: ৩৩৩",
     sources: [
       { name: "myGov", url: "https://www.mygov.bd" },
-      { name: "National Portal", url: "https://bangladesh.gov.bd" }
+      { name: "জাতীয় পোর্টাল", url: "https://bangladesh.gov.bd" }
     ]
   },
   {
     id: "birth",
-    keys: ["জন্ম", "জন্ম নিবন্ধন", "birth", "bris", "জন্ম সনদ"],
+    keys: ["জন্ম", "জন্ম নিবন্ধন", "birth", "bris", "জন্ম সনদ", "বার্থ সার্টিফিকেট"],
     title: "জন্ম নিবন্ধন",
-    answer: `জন্ম নিবন্ধন আবেদন ও যাচাই সাধারণত BRIS পোর্টালে হয়।
-
-কী করবেন
-1. bdris.gov.bd এ যান
-2. অনলাইন আবেদন বা সনদ যাচাই করুন
-3. স্থানীয় ইউনিয়ন / পৌরসভা / সিটি কর্পোরেশন অফিসের নির্দেশনা দেখুন
-
-সোর্স
-- https://bdris.gov.bd`,
+    answer: "জন্ম নিবন্ধন ও সনদ যাচাই bdris.gov.bd এ।\n\nকী করবেন\n1. সাইটে যান\n2. আবেদন বা সনদ যাচাই করুন\n3. স্থানীয় ইউনিয়ন / পৌরসভা অফিসের নিয়ম দেখুন",
     sources: [{ name: "BRIS", url: "https://bdris.gov.bd" }]
+  },
+  {
+    id: "helpline",
+    keys: ["হটলাইন", "hotline", "জরুরি", "নম্বর", "কল", "৩৩৩", "999", "৯৯৯"],
+    title: "জরুরি ও সেবা নম্বর",
+    answer: "কাজে লাগে:\n- ৩৩৩ — সরকারি তথ্য\n- ৯৯৯ — জরুরি\n- ১০৯ — নারী ও শিশু সহায়তা\n- ১৬১২২ — ভূমি\n- ১০৬ — দুদক\n\nজীবন-ঝুঁকিতে ৯৯৯।",
+    sources: [{ name: "জাতীয় পোর্টাল", url: "https://bangladesh.gov.bd" }]
+  },
+  {
+    id: "ekpay",
+    keys: ["বিল", "বিদ্যুৎ বিল", "ekpay", "একপে", "gas bill", "পানি বিল", "ইউটিলিটি"],
+    title: "সরকারি বিল",
+    answer: "অনেক বিল ekpay.gov.bd এ পরিশোধ করা যায়।\n\nকী করবেন\n1. ekpay.gov.bd এ যান\n2. বিলের ধরন বেছে নিন\n3. অ্যাকাউন্ট নম্বর দিয়ে পরিশোধ করুন",
+    sources: [{ name: "EkPay", url: "https://ekpay.gov.bd" }]
   }
 ];
 
-function findAnswer(q) {
-  const text = (q || "").toLowerCase();
-  if (!text.trim()) return null;
-  let best = null;
-  let score = 0;
-  for (const item of KB) {
-    let s = 0;
-    for (const k of item.keys) {
-      if (text.includes(k.toLowerCase())) s += k.length;
+function normalize(s) {
+  return (s || "").toLowerCase().replace(/[।!?.,]/g, " ").replace(/\s+/g, " ").trim();
+}
+
+function findMatches(q) {
+  const text = normalize(q);
+  if (!text) return [];
+  const scored = KB.map(function (item) {
+    let score = 0;
+    for (let i = 0; i < item.keys.length; i++) {
+      const key = normalize(item.keys[i]);
+      if (!key) continue;
+      if (text === key) score += 12;
+      else if (text.indexOf(key) !== -1) score += 6 + Math.min(key.length, 8);
+      else if (key.indexOf(text) !== -1 && text.length >= 3) score += 3;
     }
-    if (s > score) { score = s; best = item; }
-  }
-  return score > 0 ? best : null;
+    return { item: item, score: score };
+  }).filter(function (x) { return x.score > 0; });
+  scored.sort(function (a, b) { return b.score - a.score; });
+  return scored;
+}
+
+function findAnswer(q) {
+  const hits = findMatches(q);
+  if (!hits.length) return null;
+  if (hits.length === 1 || hits[0].score >= hits[1].score + 3) return hits[0].item;
+  return { multi: true, items: hits.slice(0, 3).map(function (h) { return h.item; }) };
 }
